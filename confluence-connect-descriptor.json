@@ -1,0 +1,53 @@
+{
+  "key": "content-property-browser",
+  "name": "Content Property Browser",
+  "description": "Allows the viewing of the current state of the content properties in a page.",
+  "vendor": {
+    "name": "Dugald Morrow",
+    "url": "https://github.com/dugaldmorrow/content-property-browser"
+  },
+  "baseUrl": "https://dugaldmorrow.github.io/content-property-browser/build",
+  "links": {
+    "self": "https://dugaldmorrow.github.io/content-property-browser/public/confluence-connect-descriptor.json",
+    "homepage": "https://dugaldmorrow.github.io/content-property-browser/"
+  },
+  "authentication": {
+    "type": "none"
+  },
+  "scopes": ["READ"],
+  "modules": {
+    "dialogs": [{
+      "key": "content-property-browser-dialog",
+      "url": "/",
+      "cacheable": true,
+      "options": {
+        "size": "x-large",
+        "header": {
+          "value": "Content Property Browser"
+        }
+      }
+    }],
+    "webItems": [{
+      "key": "content-property-browser-popup",
+      "name": {
+        "value": "Content Property Browser"
+      },
+      "tooltip": {
+        "value": "Content Property Browser"
+      },
+      "location": "system.content.action/secondary",
+      "context": "addon",
+      "target": {
+        "type": "dialogmodule",
+        "options": {
+          "key": "content-property-browser-dialog"
+        }
+      },
+      "icon": {
+        "width": 16,
+        "height": 16,
+        "url": "/images/icon.png"
+      }
+    }]
+  }
+}
