@@ -6,7 +6,7 @@
     "name": "Dugald Morrow",
     "url": "https://github.com/dugaldmorrow/content-property-browser"
   },
-  "baseUrl": "https://roobrick.au.ngrok.io",
+  "baseUrl": "https://dugaldmorrow.github.io/content-property-browser/build",
   "links": {
     "self": "https://dugaldmorrow.github.io/content-property-browser/public/confluence-connect-descriptor.json",
     "homepage": "https://dugaldmorrow.github.io/content-property-browser/"
