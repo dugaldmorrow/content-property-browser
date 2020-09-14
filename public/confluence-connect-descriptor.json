@@ -6,10 +6,10 @@
     "name": "Dugald Morrow",
     "url": "https://github.com/dugaldmorrow/content-property-browser"
   },
-  "baseUrl": "https://dugaldmorrow.github.io",
+  "baseUrl": "https://dugaldmorrow.github.io/content-property-browser",
   "links": {
-    "self": "https://dugaldmorrow.github.io/confluence-connect-descriptor.json",
-    "homepage": "https://dugaldmorrow.github.io/confluence-connect-descriptor.json"
+    "self": "https://dugaldmorrow.github.io/content-property-browser/confluence-connect-descriptor.json",
+    "homepage": "https://dugaldmorrow.github.io/content-property-browser/confluence-connect-descriptor.json"
   },
   "authentication": {
     "type": "none"
