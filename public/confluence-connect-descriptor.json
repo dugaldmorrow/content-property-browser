@@ -8,8 +8,8 @@
   },
   "baseUrl": "https://dugaldmorrow.github.io",
   "links": {
-    "self": "https://dugaldmorrow.github.io/atlassian-connect.json",
-    "homepage": "https://dugaldmorrow.github.io/atlassian-connect.json"
+    "self": "https://dugaldmorrow.github.io/confluence-connect-descriptor.json",
+    "homepage": "https://dugaldmorrow.github.io/confluence-connect-descriptor.json"
   },
   "authentication": {
     "type": "none"
