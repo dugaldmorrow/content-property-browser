@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import DynamicTable from '@atlaskit/dynamic-table';
-import urlUtil from './UrlUtil';
 
 /* global AP */
 
@@ -14,37 +13,37 @@ export default class App extends PureComponent {
   };
 
   componentDidMount() {
-    const contentId = urlUtil.getQueryParameter('contentId');
-    this.setState({
-      contentId: contentId
-    });
     this.setState({
       loading: true
     });
     if (AP) {
-      AP.request({
-        url: `/rest/api/content/${contentId}/property?start=${this.state.start}&limit=${this.state.limit}`,
-        error: (error) => {
-          this.setState({
-            error: error,
-            loading: false
-          });
-        },
-        success: (responseJson) => {
-          try {
+      AP.context.getContext(context => {
+        console.log('context:', context);
+        const contentId = context.confluence.content.id;
+        AP.request({
+          url: `/rest/api/content/${contentId}/property?start=${this.state.start}&limit=${this.state.limit}`,
+          error: (error) => {
             this.setState({
+              error: error,
               loading: false
             });
-            const contentPropertyData = JSON.parse(responseJson);
-            this.setState({
-              contentPropertyData: contentPropertyData
-            });
-          } catch (error) {
-            this.setState({
-              error: error
-            });
+          },
+          success: (responseJson) => {
+            try {
+              this.setState({
+                loading: false
+              });
+              const contentPropertyData = JSON.parse(responseJson);
+              this.setState({
+                contentPropertyData: contentPropertyData
+              });
+            } catch (error) {
+              this.setState({
+                error: error
+              });
+            }
           }
-        }
+        });
       });
     }
   };

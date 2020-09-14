@@ -18,7 +18,7 @@
   "modules": {
     "dialogs": [{
       "key": "content-property-browser-dialog",
-      "url": "/?contentId={content.id}",
+      "url": "/",
       "cacheable": true,
       "options": {
         "size": "x-large",
