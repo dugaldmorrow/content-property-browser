@@ -111,10 +111,14 @@ export default class App extends PureComponent {
     );
   }
 
+  renderState = () => {
+    return (<pre>{JSON.stringify(this.state, null, 2)}</pre>);
+  }
+
   render() {
     return (
       <div>
-        {this.state.contentPropertyData ? this.renderTable() : null}
+        {this.state.contentPropertyData ? this.renderTable() : this.renderState()}
       </div>
     );
   }
